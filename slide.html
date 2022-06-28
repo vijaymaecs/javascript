@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide</title>
+    <style>
+        .slide {
+            position: absolute;
+            width: 400px;
+            top: 0px;
+            left: 0px;
+            bottom: 0px;
+            background-color: #f381e7;
+            box-shadow: 5px 0px 10px #CCC;
+            transition: all .25s ease-in-out;
+        }
+
+        ul {
+            position: absolute;
+            right: 50px;
+        }
+
+        ul li {
+            display: inline-block;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 20px;
+            margin: 0px 10px;
+            cursor: pointer;
+            color: #000;
+        }
+
+        ul li:hover {
+            color: #CCC;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="slide" class="slide"></div>
+
+    <ul>
+        <li onclick="slideClose()">Close</li>
+        <li onclick="slideOpen()">Open</li>
+    </ul>
+
+    <script>
+        function slideClose() {
+            document.getElementById('slide').style.left = "-400px";
+        }
+
+        function slideOpen() {
+            document.getElementById('slide').style.left = "0px";
+        }
+    </script>
+</body>
+
+</html>

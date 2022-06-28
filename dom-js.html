@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #block {
+            width: 500px;
+            height: 500px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <input type="button" value="Show Block" onclick="showBlock()">
+    <input type="button" value="Hide Block" onclick='document.getElementById("block").style.display = "none"'>
+    <br><br><br>
+    <div id="block"></div>
+
+    <script>
+        function showBlock() {
+            document.getElementById("block").style.display = "block";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <style>
+        * {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        #err {
+            background-color: red;
+            width: 450px;
+            height: 40px;
+            line-height: 40px;
+            color: #fff;
+            text-align: center;
+            display: none;
+        }
+
+        .form-group {
+            width: 400px;
+            background-color: yellow;
+            padding: 10px 25px;
+        }
+
+        label {
+            display: block;
+        }
+
+        input[type=text],
+        input[type=password] {
+            width: 100%;
+            height: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <form onsubmit="return validate()">
+        <div id="err"></div>
+        <div class="form-group">
+            <label for="name">Enter your Name</label>
+            <input type="text" name="name" id="name">
+        </div>
+        <div class="form-group">
+            <label for="password">Enter your Password</label>
+            <input type="password" name="password" id="password">
+        </div>
+        <div class="form-group">
+            <label for="email">Enter your eMail</label>
+            <input type="text" name="email" id="email">
+        </div>
+        <div class="form-group">
+            <label for="name">Select your Branch</label>
+            Web Design <input type="radio" name="branch" id="web">
+            Web Development <input type="radio" name="branch" id="dev">
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Validate Form">
+        </div>
+    </form>
+
+    <script>
+        function validate() {
+            // console.log("Function Works");
+            const e = document.getElementById("err");
+            const mailval = /[0-9A-Za-z]+[@]+[A-Za-z]+[.]+[com]/;
+            const letter = /[A-Za-z]/;
+            const number = /[0-9]{10}/;
+
+            let na = document.getElementById("name").value;
+            let p = document.getElementById("password").value;
+            let em = document.getElementById("email").value;
+
+            if ((na.length == 0)) {
+                e.innerHTML = "Name cannot be Empty";
+                e.style.display = "block";
+                return false;
+            }
+
+            if (na.length > 0) {
+                console.log(na.length);
+                if (!(na.match(letter))) {
+                    e.innerHTML = "Name cannot be Numbers";
+                    e.style.display = "block";
+                    return false;
+                } else {
+                    e.innerHTML = "Input Validated...";
+                    e.style.display = "none";
+                    return false;
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Working with Form Validation Using Regular Expression</title>
+</head>
+
+<body>
+    <form onsubmit="return validate()">
+        <label for="phone">Enter your Contact Number :</label>
+        <input type="text" name="phone" id="phone" maxlength="10">
+        <input type="submit" value="Validate Phone Number">
+    </form>
+
+    <script>
+        function validate() {
+            let number = /[0-9]{10}/;
+            let mNumber = document.getElementById('phone').value;
+
+            if ((mNumber.length == 0)) {
+                console.log('Contact Number cannot be Empty');
+                return false;
+            }
+
+            if ((mNumber.length < 10) || (mNumber.length > 10)) {
+                console.log('Contact Number cannot be less then or more than 10 digits');
+                return false;
+            }
+
+            if (mNumber.length == 10) {
+                if (!(mNumber.match(number))) {
+                    console.log('Contact Number cannot be alpha characters');
+                    return false;
+                } else {
+                    console.log('Input Validated...');
+                    return false;
+                }
+            }
+
+
+
+            // if ( mNumber.length == 0 ) {
+            //     console.log("Contact Number cannot be empty");
+            // } else {
+            //     console.log("Contact Number validation done");
+            // }
+            // console.log("Form Submitted");
+            // return false;
+        }
+    </script>
+</body>
+
+</html>

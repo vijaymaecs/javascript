@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom List</title>
+</head>
+<body>
+    <form name="myForm">
+        <input type="text" name="add_text">
+        <input type="button" value="Add Element" onclick="myFunction()">
+        <br><br><br>
+        <select id="mySelect">
+            <option>Adobe Photoshop</option>
+            <option>Adobe Illustrator</option>
+            <option>Adobe Animate</option>
+        </select>
+    </form>
+
+    <script>
+        function myFunction() {
+            var addElement = document.getElementById('mySelect');
+            var myOpt = document.createElement("option");
+            myOpt.text = document.myForm.add_text.value;
+            addElement.appendChild(myOpt);
+            clearField();
+        }
+
+        function clearField() {
+            document.myForm.add_text.value = "";
+        }
+    </script>
+</body>
+</html>

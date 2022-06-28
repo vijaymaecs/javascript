@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Working with Form Validation Using Regular Expression</title>
+</head>
+
+<body>
+    <form onsubmit="return validate()">
+        <label for="eMail">Enter your Contact :</label>
+        <input type="text" name="email" id="email">
+        <input type="submit" value="Validate eMail">
+    </form>
+
+    <script>
+        function validate() {
+            const mailval = /[0-9A-Za-z]+[@]+[A-Za-z]+[.]+[com]/;
+            let mMail = document.getElementById('email').value;
+
+            if ((mMail.length == 0)) {
+                console.log('Field cannot be Empty');
+                return false;
+            }
+
+            if (mMail.length > 0) {
+                console.log(mMail.length);
+                if (!(mMail.match(mailval))) {
+                    console.log('Enter a Valid Format eMail');
+                    return false;
+                } else {
+                    console.log('Input Validated...');
+                    return false;
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

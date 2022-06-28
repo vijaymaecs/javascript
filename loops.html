@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops</title>
+    <style>
+        p {
+            margin: auto;
+            display: inline-block;
+            width: 200px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #CCC;
+            margin-bottom: 5px;
+            border: 2px solid #333;
+        }
+
+        p:nth-child(even) {
+            background-color: #EEE
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- <input type="button" value="Click Count" onclick="calculateCount()"> -->
+    <script>
+        // let table_num = prompt("Enter table number?");
+        // let table_end = prompt("Enter the number till where you want to generate?");
+
+        let table_num = 10;
+        let table_end = 40
+
+        // for ( let count = 1; count <= table_end; count++ ) {
+        // console.log(table_num + " * " + count + " = " + (table_num * count));
+
+        //     document.writeln("<p>" + table_num + " * " + count + " = " + (table_num * count) + "</p>");
+        // }
+
+        // let count = 1;
+
+        // while ( count >= table_end ) {
+        //     document.writeln("<p>" + table_num + " * " + count + " = " + (table_num * count) + "</p>");
+        //     count++;
+        // }
+
+        let count = 1;
+
+        do {
+            document.writeln("<p>" + table_num + " * " + count + " = " + (table_num * count) + "</p>");
+            count++;
+        } while (count >= table_end)
+
+        // console.log(table_num + " - " + table_end);
+        // 3 types of loops...
+
+        /*
+            for loop
+
+            if you want to create 10 boxes...
+
+            syntax...
+
+            for ( initialization; condition; iteration ) {
+
+            }
+
+            define the variable outside the loop
+
+            for ( let x = 1; x <= 10; x++ ) {
+                console.log(x);
+            }
+
+            while loop
+
+            do while loop
+        */
+
+        // let x;
+
+        // for ( x = 1; x <= 10; x++ ) {
+        //     console.log("The value of x is : " + x);
+        // }
+        // console.log("You are out of the loop... The value of x now is : " + x);
+        // let count = 1;
+        // function calculateCount() {
+        //     let x;
+
+        //     if ( count > 10) {
+        //         console.log("Seats Full...");
+        //     } else {
+        //         console.log("Congratulations");
+        //     }
+        //     console.log(count);
+        //     count++;
+        // }
+
+        // let count = 0;
+
+        // function calculateCount() {
+        //     let x;
+        //     if ( count >= 10 ) {
+        //         count = 1
+        //     } else {
+        //         count++;
+        //     }
+        //     console.log( "The Value of Count is : " + count);
+        // }
+    </script>
+</body>
+
+</html>

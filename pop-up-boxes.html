@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pop Up Boxes</title>
+
+    <script>
+        function pageLoad() {
+            console.log("Hello Everyone...");
+        }
+
+        function showMsg() {
+            // three type of pop up boxes...
+            // alert box
+            // confirm box
+            // propt box
+
+            // alert("This is an alert box...");
+
+            // var getVal = confirm("Do you like web design?");
+
+            // console.log(getVal);
+
+            // if( getVal == true ) {
+            //     alert("Yay thats good...");
+            // } else {
+            //     alert("Dont hesitate to keep asking...");
+            // }
+
+            // prompt("What is that you want to learn?","Enter you tech");
+            let tech = prompt("What is that you want to learn?");
+            
+            console.log(tech);
+
+            if(tech == "javascript") {
+                console.log("You have taken the right decission");
+            } else {
+                console.log("Javascript is the future of web");
+            }
+        }
+    </script>
+
+
+</head>
+<body onload="pageLoad()">
+    <input type="button" value="Click Me" onclick="showMsg()">
+</body>
+</html>

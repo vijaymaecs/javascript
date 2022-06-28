@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #timer {
+            width: 500px;
+            height: 500px;
+            margin: auto;
+            background-color: brown;
+            position: relative;
+            top: 100px;
+            display: block;
+            transition: all .5s;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="timer"></div>
+
+    <script>
+        window.onload = function() {
+            setTimeout(showbox, 3000);
+        }
+
+        function showbox() {
+            // console.log("Triggered with Timer...");
+
+            document.getElementById("timer").style.display = "none";
+        }
+    </script>
+</body>
+</html>

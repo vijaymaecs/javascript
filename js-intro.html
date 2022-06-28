@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Intro</title>
+    <style>
+        div {
+            width: 500px;
+            height: 500px;
+            background-color: blue;
+            margin-bottom: 50px;
+            transition: all .25s ease-out;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box"></div>
+    <input type="button" value="Change Color" onclick="changeSize()">
+
+    <script>
+        function changeSize() {
+            document.getElementById('box').style.width = "100px";
+            document.getElementById('box').style.height = "100px";
+            document.getElementById('box').style.backgroundColor = "#f381e7";
+        }
+    </script>
+</body>
+
+</html>

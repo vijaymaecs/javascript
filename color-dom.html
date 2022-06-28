@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Change</title>
+    <style>
+        .colors div {
+            width: 100px;
+            height: 100px;
+            display: inline-block;
+        }
+
+        #box {
+            width: 350px;
+            height: 350px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hover to See Color Change...</h1>
+    <div class="colors">
+        <div onmouseover="bgChange(this.style.backgroundColor)" onmouseout="document.getElementById('box').style.backgroundColor = 'yellow'" style="background-color: aqua;"></div>
+        <div onmouseover="bgChange(this.style.backgroundColor)" onmouseout="document.getElementById('box').style.backgroundColor = 'yellow'" style="background-color: brown;"></div>
+        <div onmouseover="bgChange(this.style.backgroundColor)" onmouseout="document.getElementById('box').style.backgroundColor = 'yellow'" style="background-color: blue;"></div>
+    </div>
+    <div id="box"></div>
+
+    <script>
+        function bgChange(bg_color) {
+            document.getElementById("box").style.backgroundColor = bg_color;
+        }
+    </script>
+</body>
+</html>
